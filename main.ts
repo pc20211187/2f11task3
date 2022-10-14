@@ -1,11 +1,46 @@
+let counter = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(6)
-    basic.showNumber(5)
-    basic.showNumber(4)
-    basic.showNumber(3)
-    basic.showNumber(2)
-    basic.showNumber(1)
+    basic.showNumber(randint(1, 6))
 })
-basic.forever(function () {
-	
+input.onButtonPressed(Button.B, function () {
+    counter = 9
+    for (let index = 0; index < 10; index++) {
+        basic.showString("" + (counter))
+        counter += -1
+    }
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # . # .
+        . . # . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        # . . . #
+        . # . # .
+        . . # . .
+        `)
+    basic.showLeds(`
+        . # . # .
+        # . . . #
+        . . . . .
+        # . . . #
+        . # . # .
+        `)
+    basic.showLeds(`
+        # . . . #
+        . . . . .
+        . . . . .
+        . . . . .
+        # . . . #
+        `)
 })
