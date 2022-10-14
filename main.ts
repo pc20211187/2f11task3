@@ -1,10 +1,10 @@
 let counter = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(randint(1, 6))
+    counter = -1
 })
 input.onButtonPressed(Button.B, function () {
     counter = 9
-    for (let index = 0; index < 10; index++) {
+    while (counter >= 0) {
         basic.showString("" + (counter))
         counter += -1
     }
